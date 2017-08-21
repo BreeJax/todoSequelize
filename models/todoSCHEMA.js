@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     timeCreated: {
-      type: DataTypes.TIMESTAMP,
+      type: DataTypes.DATE,
       allowNull: false
     },
     completed: {
@@ -15,4 +15,5 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: false
     }
   })
+  return toDo
 }
