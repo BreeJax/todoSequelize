@@ -1,0 +1,11 @@
+Model = SCHEMA
+
+this is back in SQL
+
+migration is really on for SQL, but it is available in Mongo, but no one really uses it.
+
+installed and their commands:
+  npm install sequelize pg --save
+  ((Run npm install sequelize pg --save. pg is the library for using PostgreSQL.))
+sequelize init ((Run sequelize init. This will create the config, migrations, seeders, and models directories.))
+===Edit config/config.json. The dialect should be "postgres" and the username should be your local username. Change the database names to reflect the actual project.===
