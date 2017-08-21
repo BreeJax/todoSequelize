@@ -5,10 +5,6 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: false
     },
-    timeCreated: {
-      type: DataTypes.DATE,
-      allowNull: false
-    },
     completed: {
       type: DataTypes.BOOLEAN,
       allowNull: false,

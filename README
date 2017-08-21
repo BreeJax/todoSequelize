@@ -19,3 +19,12 @@ Hard mode
 
 Add a button to delete all completed todos.
 Sort your todos by their creation date, newest on top.
+
+*****DONE AS A HIAL MARY*********
+sequelize model:create --name toDo --attributes 'decription:TEXT  completed:BOOLEAN'
+
+Sequelize [Node: 8.2.1, CLI: 2.8.0, ORM: 4.6.0]
+
+Loaded configuration file "config/config.json".
+Using environment "development".
+****************************************

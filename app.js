@@ -1,6 +1,7 @@
 const express = require("express")
 const mustacheExpress = require("mustache-express")
 const bodyParser = require("body-parser")
+// const models = require("./models")
 // const jsonfile = require("jsonfile")
 
 const app = express()
@@ -14,7 +15,6 @@ app.set("views", "./templates")
 app.set("view engine", "mustache")
 app.use(express.static("public"))
 
-const models = require("./models")
 // models.User.findOne().then(function(user) {
 //   console.log(user)
 // })
