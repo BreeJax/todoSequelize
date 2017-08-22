@@ -22,18 +22,47 @@ router.post("/add", function(req, res) {
     completed: false
   })
 
-  newTodo.save().then(databaseSavedTodo => {
-    res.redirect("/")
-  })
+  newTodo
+    .save()
+    .then(databaseSavedTodo => {
+      res.redirect("/")
+    })
+    .catch(err => {
+      console.log(err)
+    })
+})
+// router.post("/completed", function(req, res) {
+//   const updateTodo = models.toDo.update({
+//     req.id.update({completed: true}).then(() =>{
+//       res.redirect("/")
+//     })
+//   })
+// }
+// )
+//
+
+router.post("/completed", function(req, res) {
+  const id = parseInt(req.body.id)
+  //grab id from table
+  //change completed to true
+  //push changes
+  const updateTodo = models.toDo
+    .update(
+      {
+        completed: true
+      },
+      {
+        where: {
+          id: id
+        }
+      }
+    )
+    .then(databaseSavedTodo => {
+      res.redirect("/")
+    })
+    .catch(err => {
+      console.log(err)
+    })
 })
 
-router.post("/completed", (req, res) => {
-  const id = parseInt(req.body.id)
-  let fintodo = todos.find(todos => todos.id === id)
-  if (fintodo) {
-    fintodo.completed = true
-    fintodo.when = new Date()
-  }
-  res.redirect("/")
-})
 module.exports = router
