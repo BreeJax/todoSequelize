@@ -1,7 +1,7 @@
 "use strict"
 module.exports = function(sequelize, DataTypes) {
   let toDo = sequelize.define("toDo", {
-    description: {
+    decription: {
       type: DataTypes.TEXT,
       allowNull: false
     },

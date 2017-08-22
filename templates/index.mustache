@@ -7,7 +7,7 @@
   </head>
   <body>
     <form class="" action="/add" method="post">
-      <input type="text" name="description" placeholder="Add a todo" value="">
+      <input type="text" name="decription" placeholder="Add a todo" value="">
       <button type="submit" name="button">Add todo</button>
     </form>
     <ul>
@@ -16,7 +16,7 @@
         <form class="" action="/completed" method="post">
           <button type="submit" name="buttonComplete"> Task Completed</button>
           <input type="hidden" name="id" value="{{id}}">
-          {{description}}
+          {{decription}}
         </form>
       </li>
       {{/todos}}
@@ -24,7 +24,7 @@
     <h3>Completed Tasks</h3>
     <ul>
       {{#fintodos}}
-      <li>{{description}} @ {{when}}</li>
+      <li>{{decription}} @ {{createdAt}}</li>
       {{/fintodos}}
     </ul>
   </body>
