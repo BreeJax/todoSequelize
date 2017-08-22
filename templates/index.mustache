@@ -25,6 +25,9 @@
     <ul>
       {{#fintodos}}
       <li>{{decription}} @ {{createdAt}}</li>
+      <form class="" action="/destroy" method="post">
+        <button type="submit" name="id" value="{{id}}">Delete this!</button>
+      </form>
       {{/fintodos}}
     </ul>
   </body>

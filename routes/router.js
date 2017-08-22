@@ -65,4 +65,20 @@ router.post("/completed", function(req, res) {
     })
 })
 
+router.post("/destroy", function(req, res) {
+  const id = parseInt(req.body.id)
+  models.toDo
+    .destroy({
+      where: {
+        id: id
+      }
+    })
+    .then(deleteTodo => {
+      res.redirect("/")
+    })
+    .catch(err => {
+      console.log(err)
+    })
+})
+
 module.exports = router
