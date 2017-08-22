@@ -16,12 +16,15 @@ router.get("/", function(req, res) {
       console.log(err)
     })
 })
+router.post("/add", function(req, res) {
+  const newTodo = models.toDo.build({
+    decription: req.body.decription,
+    completed: false
+  })
 
-router.post("/add", (req, res) => {
-  const description = req.body.description
-
-  todos.push({ id: todos.length + 1, completed: false, description: description })
-  res.redirect("/")
+  newTodo.save().then(databaseSavedTodo => {
+    res.redirect("/")
+  })
 })
 
 router.post("/completed", (req, res) => {
