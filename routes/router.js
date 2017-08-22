@@ -18,7 +18,7 @@ router.get("/", function(req, res) {
 })
 router.post("/add", function(req, res) {
   const newTodo = models.toDo.build({
-    decription: req.body.decription,
+    description: req.body.description,
     completed: false
   })
 
@@ -49,7 +49,8 @@ router.post("/completed", function(req, res) {
   const updateTodo = models.toDo
     .update(
       {
-        completed: true
+        completed: true,
+        completedAt: Date.now()
       },
       {
         where: {

@@ -3,8 +3,9 @@ module.exports = function(sequelize, DataTypes) {
   var toDo = sequelize.define(
     "toDo",
     {
-      decription: DataTypes.TEXT,
-      completed: DataTypes.BOOLEAN
+      description: DataTypes.TEXT,
+      completed: DataTypes.BOOLEAN,
+      completedAt: DataTypes.DATE
     },
     {
       classMethods: {
